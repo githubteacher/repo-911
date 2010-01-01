@@ -1,0 +1,16 @@
+#! /usr/bin/env bash
+
+if [ -z "$2" ]
+then
+  COMMIT_DATE=$(date)
+else
+  COMMIT_DATE=$2
+fi
+
+COMMIT_MESSAGE="$1
+
+This commit contains strictly confidential coding information.
+"
+
+git add .
+git commit -m "$COMMIT_MESSAGE" --date "$COMMIT_DATE"
