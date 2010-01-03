@@ -2,4 +2,4 @@
 
 FILENAME="build_$(date +%s).war"
 mkdir -p build
-dd if=/dev/urandom of=build/$FILENAME bs=1 count=3000000
+dd if=/dev/urandom of=build/$FILENAME bs=1 count=30000000
