@@ -2,11 +2,11 @@
 
 require "date"
 
-date = DateTime.parse("2010-01-01 10:00:00")
+date = DateTime.parse("2012-01-01 10:00:00")
 
-20.times do |i|
+5.times do |i|
   date += 10
   puts "Generating build ##{i}..."
   system %{script/build}
-  system %{script/commit "Did some work and created build ##{i}" "#{date}"}
+  system %{script/commit "Did some work and created build ##{i} on a release branch" "#{date}"}
 end
